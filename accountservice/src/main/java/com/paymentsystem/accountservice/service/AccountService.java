@@ -33,4 +33,9 @@ public class AccountService {
 
         return accountRepository.save(account);
     }
+
+    public Account getAccount(UUID accountId){
+        return accountRepository.findById(accountId)
+            .orElseThrow(() -> new RuntimeException("Account not found:" + accountId));
+    }
 }
