@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: payments
       POSTGRES_PASSWORD: payments
     ports:
-      - "5432:5432"
+      - "5434:5432"
     volumes:
       - payment_postgres_data:/var/lib/postgresql/data
     
